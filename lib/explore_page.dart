@@ -41,7 +41,7 @@ class _ExploreViewState extends State<_ExploreView> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            // ── Search box ────────────────────────────────────────────────
+            //search
             TextField(
               controller: _controller,
               decoration: InputDecoration(
@@ -54,7 +54,7 @@ class _ExploreViewState extends State<_ExploreView> {
                         onPressed: () {
                           _controller.clear();
                           context.read<SearchCubit>().searchUsers('');
-                          setState(() {}); // refresh suffixIcon
+                          setState(() {});
                         },
                       ),
                 border: OutlineInputBorder(
@@ -63,17 +63,22 @@ class _ExploreViewState extends State<_ExploreView> {
               ),
               onChanged: (value) {
                 context.read<SearchCubit>().searchUsers(value.trim());
-                setState(() {}); // update clear‑icon visibility
+                setState(() {});
               },
             ),
             const SizedBox(height: 16),
 
-            // ── Results / states ─────────────────────────────────────────
+            // Results
             Expanded(
               child: BlocBuilder<SearchCubit, SearchState>(
                 builder: (context, state) {
                   if (state is SearchInitial) {
-                    return const Center(child: Text('Type to search'));
+                    return const Center(
+                      child: Text(
+                        'Type to search',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    );
                   }
                   if (state is SearchLoading) {
                     return const Center(child: CircularProgressIndicator());
@@ -82,11 +87,7 @@ class _ExploreViewState extends State<_ExploreView> {
                     return Center(child: Text(state.message));
                   }
                   if (state is SearchLoaded) {
-                    final users = state.users
-                        .whereType<
-                          ProfileUser
-                        >() // safeguard if list contains nulls
-                        .toList();
+                    final users = state.users.whereType<ProfileUser>().toList();
 
                     if (users.isEmpty) {
                       return const Center(child: Text('No users found'));
@@ -108,7 +109,7 @@ class _ExploreViewState extends State<_ExploreView> {
                       },
                     );
                   }
-                  // Fallback (shouldn't hit)
+
                   return const SizedBox.shrink();
                 },
               ),
