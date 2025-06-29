@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "794341577602",
+    "project_id": "fire-social-media-57741",
+    "storage_bucket": "fire-social-media-57741.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794341577602:android:d748dc17a6c58c9eaab59b",
+        "android_client_info": {
+          "package_name": "com.example.fire_social_media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfkP2-0zGwlvnmNIX1BAZJvVRgbhYukyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
