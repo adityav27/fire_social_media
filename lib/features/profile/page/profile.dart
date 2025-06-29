@@ -2,9 +2,9 @@ import 'package:fire_social_media/components/bio_box.dart';
 import 'package:fire_social_media/components/my_drawer.dart';
 import 'package:fire_social_media/features/auth/domain/app_user.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
-import 'package:fire_social_media/profile/page/edit_profile_page.dart';
-import 'package:fire_social_media/profile/page/profile_cubit.dart';
-import 'package:fire_social_media/profile/page/profile_state.dart';
+import 'package:fire_social_media/features/profile/page/edit_profile_page.dart';
+import 'package:fire_social_media/features/profile/page/profile_cubit.dart';
+import 'package:fire_social_media/features/profile/page/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

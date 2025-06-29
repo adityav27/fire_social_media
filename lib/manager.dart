@@ -1,7 +1,7 @@
 import 'package:fire_social_media/explore_page.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
 import 'package:fire_social_media/home_page.dart';
-import 'package:fire_social_media/profile/page/profile.dart';
+import 'package:fire_social_media/features/profile/page/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';

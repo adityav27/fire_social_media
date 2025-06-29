@@ -1,7 +1,7 @@
 import 'package:fire_social_media/components/my_textfield.dart';
-import 'package:fire_social_media/profile/domain/profile_user.dart';
-import 'package:fire_social_media/profile/page/profile_cubit.dart';
-import 'package:fire_social_media/profile/page/profile_state.dart';
+import 'package:fire_social_media/features/profile/domain/profile_user.dart';
+import 'package:fire_social_media/features/profile/page/profile_cubit.dart';
+import 'package:fire_social_media/features/profile/page/profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

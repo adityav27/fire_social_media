@@ -3,7 +3,6 @@ import 'package:fire_social_media/components/my_textfield.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatefulWidget {
   final void Function()? togglePage;
