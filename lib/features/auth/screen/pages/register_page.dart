@@ -3,6 +3,7 @@ import 'package:fire_social_media/components/my_textfield.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatefulWidget {
   final void Function()? togglePage;
@@ -70,17 +71,14 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.face_unlock_rounded,
-                  size: 100,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
+                Image.asset("assets/logo.png"),
+
                 SizedBox(height: 50),
                 // welcome back msg
                 Text(
                   "Welcome to the family",
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.inversePrimary,
                     fontSize: 16,
                   ),
                 ),
@@ -108,22 +106,22 @@ class _RegisterPageState extends State<RegisterPage> {
                   obscureBool: true,
                   controller: confirmPwController,
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 80),
                 MyLogobutton(
                   message: "R E G I S T E R",
                   bgColor: Theme.of(context).colorScheme.surface,
                   whatToDo: register,
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 140),
                 //message for register
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Already have a account?",
+                      "Already have a account? ",
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.tertiary,
                       ),
                     ),
                     GestureDetector(

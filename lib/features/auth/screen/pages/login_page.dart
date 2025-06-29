@@ -3,6 +3,7 @@ import 'package:fire_social_media/components/my_textfield.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? togglePage;
@@ -51,17 +52,18 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.face_unlock_rounded,
-                  size: 100,
-                  color: Theme.of(context).colorScheme.primary,
+                Lottie.asset(
+                  'assets/register_anim.json',
+                  width: 300,
+                  height: 300,
                 ),
+
                 SizedBox(height: 50),
                 // welcome back msg
                 Text(
                   "Welcome back, you've been missed!",
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.inversePrimary,
                     fontSize: 16,
                   ),
                 ),
@@ -83,16 +85,16 @@ class _LoginPageState extends State<LoginPage> {
                   bgColor: Theme.of(context).colorScheme.surface,
                   whatToDo: login,
                 ),
-                SizedBox(height: 200),
+                SizedBox(height: 100),
                 //message for register
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Not a member?",
+                      "Not a member? ",
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.tertiary,
                       ),
                     ),
                     GestureDetector(
