@@ -7,7 +7,7 @@ class AppUser {
 
   //convert app user to json
   Map<String, dynamic> toJson() {
-    return {'email': 'email', 'name': name, 'uid': uid};
+    return {'email': email, 'name': name, 'uid': uid};
   }
 
   //convert json to app user

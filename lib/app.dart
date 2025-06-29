@@ -1,4 +1,4 @@
-import 'package:fire_social_media/features/auth/domain/firebase_auth.dart';
+import 'package:fire_social_media/features/auth/data/firebase_auth.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_cubit.dart';
 import 'package:fire_social_media/features/auth/screen/cubits/auth_state.dart';
 import 'package:fire_social_media/features/auth/screen/pages/auth_page.dart';

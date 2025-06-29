@@ -1,12 +1,14 @@
 //Child class of AuthRepo
 //Implements the function/logic of the methods used in AuthRepo
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fire_social_media/features/auth/domain/app_user.dart';
 import 'package:fire_social_media/features/auth/domain/auth_repo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseAuthRepo extends AuthRepo {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   @override
   Future<AppUser?> loginMethod(String email, String password) async {
     try {
@@ -41,9 +43,13 @@ class FirebaseAuthRepo extends AuthRepo {
       AppUser user = AppUser(
         uid: userCredential.user!.uid,
         email: email,
-        name: '',
+        name: name,
       );
-
+      // save user data in firestore
+      await firebaseFirestore
+          .collection("users")
+          .doc(user.uid)
+          .set(user.toJson());
       //return user
       return user;
     } catch (e) {
